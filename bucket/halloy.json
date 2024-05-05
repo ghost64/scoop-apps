@@ -13,9 +13,8 @@
     "installer": {
         "script": [
             "if (!(Test-Path \"$persist_dir\\halloy.toml\")) {",
-            "    $randomNumber = Get-Random -Minimum 1000 -Maximum 9999"
-            "    $content = @'# Halloy config.`r`n`r`n# For a complete list of available options,`r`n# please visit https://halloy.squidowl.org/configuration/index.html`r`n`r`n[servers.liberachat]`r`n    nickname = \"halloy$randomNumber`\"`r`n    server = `\"irc.libera.chat`\"`r`n    channels = [`\"#halloy`\"]`r`n'@",
-            "    Set-Content \"$dir\\halloy.toml\" -Value $content -Encoding ASCII -Force",
+            "    $randomNumber = Get-Random -Minimum 1000 -Maximum 9999",
+            "    Set-Content \"$dir\\halloy.toml\" @('# Halloy config.`r`n`r`n# For a complete list of available options,`r`n# please visit https://halloy.squidowl.org/configuration/index.html`r`n`r`n[servers.liberachat]`r`n    nickname = \"halloy$randomNumber`\"`r`n    server = `\"irc.libera.chat`\"`r`n    channels = [`\"#halloy`\"]`r`n') -Encoding ASCII -Force",
             "    if (Test-Path \"$env:AppData\\halloy\") {",
             "        Copy-Item \"$env:AppData\\halloy\\*\" \"$dir\" -Recurse -Exclude '*halloy.toml' -ErrorAction SilentlyContinue",
             "    }",
