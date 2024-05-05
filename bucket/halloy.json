@@ -40,12 +40,6 @@
             "Halloy"
         ]
     ],
-    "persist": [
-        "themes",
-        "history",
-        "config.toml",
-        "dashboard.json.gz"
-    ],
     "checkver": {
         "github": "https://github.com/squidowl/halloy"
     },
