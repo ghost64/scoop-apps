@@ -26,6 +26,8 @@
         "script": "Move-Item \"$dir\\*\" \"$persist_dir\" -Include '*.toml', '*.log', '*.gz'"
     },
     "persist": [
+        "themes",
+        "history"
     ],
     "shortcuts": [
         [
