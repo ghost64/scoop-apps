@@ -25,6 +25,8 @@
     "uninstaller": {
         "script": "Move-Item \"$dir\\*\" \"$persist_dir\" -Include '*.toml', '*.log', '*.gz'"
     },
+    "persist": [
+    ],
     "shortcuts": [
         [
             "halloy.exe",
