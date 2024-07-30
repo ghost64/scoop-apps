@@ -12,17 +12,17 @@
     ],
     "bin": [
         [
-            "NanaZipC.exe",
-            "7z"
+            "NanaZip.Console.exe",
+            "nanazip"
         ],
         [
-            "NanaZipG.exe",
-            "7zG"
+            "NanaZip.Modern.exe",
+            "nanazipg"
         ]
     ],
     "shortcuts": [
         [
-            "NanaZip.exe",
+            "NanaZip.Modern.exe",
             "NanaZip"
         ]
     ],
