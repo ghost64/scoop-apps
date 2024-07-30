@@ -1,9 +1,9 @@
 {
     "version": "3.0.1000.0",
-    "description": "NanaZip. The 7-Zip derivative intended for the modern Windows experience",
+    "description": "The 7-Zip derivative intended for the modern Windows experience",
     "homepage": "https://github.com/M2Team/NanaZip",
     "license": "MIT",
-    "url": "https://github.com/M2Team/NanaZip/releases/download/3.0.1000.0/NanaZip_3.0.1000.0.msixbundle",
+    "url": "https://github.com/M2Team/NanaZip/releases/download/3.0.1000.0/NanaZip_3.0.1000.0.msixbundle#/dl.7z",
     "hash": "27d4ead5f9af51e573145ce1cca78f063606ab8ae8f7124801d4d887453f5397",
     "pre_install": [
         "Remove-Item -Path \"$dir\\*\" -Exclude *.msix -Recurse -Force",
@@ -12,17 +12,17 @@
     ],
     "bin": [
         [
-            "NanaZip.Console.exe",
-            "nanazip"
+            "NanaZipC.exe",
+            "7z"
         ],
         [
-            "NanaZip.Modern.exe",
-            "nanazipg"
+            "NanaZipG.exe",
+            "7zG"
         ]
     ],
     "shortcuts": [
         [
-            "NanaZip.Modern.exe",
+            "NanaZip.exe",
             "NanaZip"
         ]
     ],
@@ -32,7 +32,7 @@
         "regex": "/releases/download/([\\d.]+)/(?<file>.*?NanaZip_([\\d.]+).0.*?\\.msixbundle)"
     },
     "autoupdate": {
-        "url": "https://github.com/M2Team/NanaZip/releases/download/$version/NanaZip_$version.msixbundle",
+        "url": "https://github.com/M2Team/NanaZip/releases/download/$version/$matchFile#/dl.7z",
         "hash": {
             "url": "https://github.com/M2Team/NanaZip/releases/tag/$version",
             "regex": "(?s)$basename.*?$sha256"
