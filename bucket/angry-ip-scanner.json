@@ -8,8 +8,8 @@
     },
     "bin": "ipscan-win64-3.9.1.exe",
     "checkver": {
-        "url": "https://github.com/angryip/ipscan/releases/download/",
-        "regex": "([\\d.]+)/"
+        "url": "https://angryip.org/download/#windows",
+        "regex": "version \\<b\\>(\\d+(\\.\\d+)+)"
     },
     "shortcuts": [
         [
