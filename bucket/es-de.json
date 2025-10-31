@@ -24,16 +24,15 @@
   "autoupdate": {
     "architecture": {
       "64bit": {
-        "url": "$($info[\"stable\"][\"WindowsPortable\"][\"url\"])",
-        "hash": "md5:$($info[\"stable\"][\"WindowsPortable\"][\"md5\"])"
+        "url": {
+          "url": "https://gitlab.com/es-de/emulationstation-de/-/raw/master/latest_release.json",
+          "jp": "$.stable.WindowsPortable.url"
+        },
+        "hash": {
+          "url": "https://gitlab.com/es-de/emulationstation-de/-/raw/master/latest_release.json",
+          "jp": "$.stable.WindowsPortable.md5"
+        }
       }
-    },
-    "script": [
-      "$json = Invoke-RestMethod 'https://gitlab.com/es-de/emulationstation-de/-/raw/master/latest_release.json'",
-      "$version = $json.stable.version",
-      "$url = $json.stable.WindowsPortable.url",
-      "$hash = 'md5:' + $json.stable.WindowsPortable.md5",
-      "Write-Output (\"version=$version`nurl=$url`nhash=$hash\")"
-    ]
+    }
   }
 }
