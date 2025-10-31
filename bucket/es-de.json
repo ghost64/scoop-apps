@@ -5,14 +5,12 @@
   "license": "MIT",
   "architecture": {
     "64bit": {
-      "url": "https://gitlab.com/es-de/emulationstation-de/-/package_files/210673039/download",
+      "url": "https://gitlab.com/es-de/emulationstation-de/-/releases/v3.3.0/downloads/ES-DE_3.3.0-x64_Portable.zip",
       "hash": "md5:9548bf3053cc42ca1152360e512cc516"
     }
   },
   "bin": "ES-DE.exe",
-  "shortcuts": [
-    ["ES-DE.exe", "ES-DE"]
-  ],
+  "shortcuts": [["ES-DE.exe", "ES-DE"]],
   "persist": "ES-DE",
   "pre_install": [
     "if (!(Test-Path \"$dir\\ES-DE\")) { New-Item \"$dir\\ES-DE\" -ItemType Directory | Out-Null }"
@@ -24,10 +22,7 @@
   "autoupdate": {
     "architecture": {
       "64bit": {
-        "url": {
-          "url": "https://gitlab.com/es-de/emulationstation-de/-/raw/master/latest_release.json",
-          "jp": "$.stable.WindowsPortable.url"
-        },
+        "url": "https://gitlab.com/es-de/emulationstation-de/-/releases/v$version/downloads/ES-DE_$version-x64_Portable.zip",
         "hash": {
           "url": "https://gitlab.com/es-de/emulationstation-de/-/raw/master/latest_release.json",
           "jp": "$.stable.WindowsPortable.md5"
