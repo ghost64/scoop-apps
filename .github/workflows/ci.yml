@@ -32,7 +32,7 @@ jobs:
             git cherry-pick -n --empty drop d99ab06
           ;}
       - name: Init Test Suite
-        uses: potatoqualitee/psmodulecache@main
+        uses: potatoqualitee/psmodulecache@v6.2.1
         with:
           modules-to-cache: BuildHelpers
           shell: powershell
@@ -64,7 +64,7 @@ jobs:
             git cherry-pick -n --empty drop d99ab06
           ;}
       - name: Init Test Suite
-        uses: potatoqualitee/psmodulecache@main
+        uses: potatoqualitee/psmodulecache@v6.2.1
         with:
           modules-to-cache: BuildHelpers
           shell: pwsh
