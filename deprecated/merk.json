@@ -1,5 +1,5 @@
 {
-    "version": " 0.051.750",
+    "version": "0.051.750",
     "description": "MERK is an open source, cross-platform, multiple-document interface GUI IRC client for Windows, Linux, and macOS written in Python, PyQt5, and Twisted.",
     "homepage": "https://github.com/nutjob-laboratories/merk",
     "license": "GPL3",
