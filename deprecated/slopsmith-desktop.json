@@ -5,12 +5,13 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/byrongamatos/slopsmith-desktop/releases/download/v0.2.7/Slopsmith.Setup.0.2.7.exe",
+            "url": "https://github.com/byrongamatos/slopsmith-desktop/releases/download/v0.2.7/Slopsmith.Setup.0.2.7.exe#/dl.7z",
             "hash": "e6c73cbaebc3748901b4d6a5daa1750c35ce9d23b0251103dc0189cd0c87a575"
         }
     },
-    "installer": "nsis",
     "bin": "Slopsmith.exe",
+    "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+    "post_install": "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*\" -Force -Recurse",
     "shortcuts": [
         [
             "Slopsmith.exe",
@@ -21,7 +22,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/byrongamatos/slopsmith-desktop/releases/download/v$version/Slopsmith.Setup.$version.exe"
+                "url": "https://github.com/byrongamatos/slopsmith-desktop/releases/download/v$version/Slopsmith.Setup.$version.exe#/dl.7z"
             }
         }
     }
