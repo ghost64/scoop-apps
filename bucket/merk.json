@@ -1,12 +1,12 @@
 {
-    "version": "0.051.750",
+    "version": "0.052.150",
     "description": "MERK is an open source, cross-platform, multiple-document interface GUI IRC client for Windows, Linux, and macOS written in Python, PyQt5, and Twisted.",
     "homepage": "https://github.com/nutjob-laboratories/merk",
     "license": "GPL3",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/nutjob-laboratories/merk/releases/download/0.051.750/merk-windows-0.051-750.zip",
-            "hash": "d80103d2278c63587514f832b97446d9c2874198f223e8f3a1f24c8677105ad7"
+            "url": "https://github.com/nutjob-laboratories/merk/releases/download/0.052.150/merk-windows-0.052-150.zip",
+            "hash": "6525cc106e3e403d96732fae8e10d6fa121278543b4b24e397b26194082ece9d"
         }
     },
     "shortcuts": [
@@ -17,9 +17,21 @@
         ]
     ],
     "bin": [
-        ["merk.exe", "merk", "--config-local"]
+        [
+            "merk.exe",
+            "merk",
+            "--config-local"
+        ]
     ],
-    "persist": [
-        ".merk"
-    ]
+    "persist": ".merk",
+    "checkver": {
+        "github": "https://github.com/nutjob-laboratories/merk"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/nutjob-laboratories/merk/releases/download/$version/merk-windows-$majorVersion.$minorVersion-$patchVersion.zip"
+            }
+        }
+    }
 }
