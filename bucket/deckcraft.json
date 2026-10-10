@@ -1,0 +1,47 @@
+{
+    "version": "0.4.0",
+    "description": "Presentations and slide shows: an open-source, clean-room reimplementation of Microsoft PowerPoint in pure Rust. Part of the ArtCraft Crafting Apps.",
+    "homepage": "https://getartcraft.com/apps/deckcraft",
+    "license": "MIT OR Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/storytold/deckcraft/releases/download/v0.4.0/deckcraft-0.4.0-windows-x64-portable.zip",
+            "hash": "a6c0074620827c3c560129f0c307321de2f482f2185346077c53c354b9ef20ad",
+            "extract_dir": "deckcraft-0.4.0-windows-x64-portable"
+        },
+        "32bit": {
+            "url": "https://github.com/storytold/deckcraft/releases/download/v0.4.0/deckcraft-0.4.0-windows-x86-portable.zip",
+            "hash": "43f12c10d7c3c4f07dc50edcdc4d267095c2bd3a9965896674bd666f1b4f901d",
+            "extract_dir": "deckcraft-0.4.0-windows-x86-portable"
+        }
+    },
+    "bin": [
+        "deckcraft.exe",
+        "deckcraft-cli.exe"
+    ],
+    "shortcuts": [
+        [
+            "deckcraft.exe",
+            "DeckCraft"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/storytold/deckcraft"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/storytold/deckcraft/releases/download/v$version/deckcraft-$version-windows-x64-portable.zip",
+                "extract_dir": "deckcraft-$version-windows-x64-portable"
+            },
+            "32bit": {
+                "url": "https://github.com/storytold/deckcraft/releases/download/v$version/deckcraft-$version-windows-x86-portable.zip",
+                "extract_dir": "deckcraft-$version-windows-x86-portable"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS.txt",
+            "find": "$basename"
+        }
+    }
+}

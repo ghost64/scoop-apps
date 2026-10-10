@@ -1,0 +1,47 @@
+{
+    "version": "0.4.0",
+    "description": "GridCraft: an open-source, clean-room spreadsheet (Microsoft Excel-style) in pure Rust. By ArtCraft.",
+    "homepage": "https://getartcraft.com/apps/gridcraft",
+    "license": "MIT OR Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/storytold/gridcraft/releases/download/v0.4.0/gridcraft-0.4.0-windows-x64-portable.zip",
+            "hash": "5cc4c595c6437882837c3d067c6f7bffa0e6452508f162a72a06088d513c9b23",
+            "extract_dir": "gridcraft-0.4.0-windows-x64-portable"
+        },
+        "32bit": {
+            "url": "https://github.com/storytold/gridcraft/releases/download/v0.4.0/gridcraft-0.4.0-windows-x86-portable.zip",
+            "hash": "9b61d0a7a66f79fab0f408eb6fdaceea65757ac5e0fa6c6d7491454ab9dfea64",
+            "extract_dir": "gridcraft-0.4.0-windows-x86-portable"
+        }
+    },
+    "bin": [
+        "gridcraft.exe",
+        "gridcraft-cli.exe"
+    ],
+    "shortcuts": [
+        [
+            "gridcraft.exe",
+            "GridCraft"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/storytold/gridcraft"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/storytold/gridcraft/releases/download/v$version/gridcraft-$version-windows-x64-portable.zip",
+                "extract_dir": "gridcraft-$version-windows-x64-portable"
+            },
+            "32bit": {
+                "url": "https://github.com/storytold/gridcraft/releases/download/v$version/gridcraft-$version-windows-x86-portable.zip",
+                "extract_dir": "gridcraft-$version-windows-x86-portable"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS.txt",
+            "find": "$basename"
+        }
+    }
+}
