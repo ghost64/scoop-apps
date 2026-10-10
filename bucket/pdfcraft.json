@@ -1,0 +1,47 @@
+{
+    "version": "0.5.0",
+    "description": "An open-source PDF workbench rebuilt in pure Rust.",
+    "homepage": "https://getartcraft.com/apps/pdfcraft",
+    "license": "MIT OR Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/storytold/pdfcraft/releases/download/v0.5.0/pdfcraft-0.5.0-windows-x64-portable.zip",
+            "hash": "50544bc6141e21e6476fcff74cba8d1ef8ff2fa23d073029d250975158c8a992",
+            "extract_dir": "pdfcraft-0.5.0-windows-x64-portable"
+        },
+        "32bit": {
+            "url": "https://github.com/storytold/pdfcraft/releases/download/v0.5.0/pdfcraft-0.5.0-windows-x86-portable.zip",
+            "hash": "b822ce63aa0c18e887b3dd1a8d52a490c7534e5a137b0176f88aee890e781601",
+            "extract_dir": "pdfcraft-0.5.0-windows-x86-portable"
+        }
+    },
+    "bin": [
+        "pdfcraft.exe",
+        "pdfcraft-cli.exe"
+    ],
+    "shortcuts": [
+        [
+            "pdfcraft.exe",
+            "PDFCraft"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/storytold/pdfcraft"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/storytold/pdfcraft/releases/download/v$version/pdfcraft-$version-windows-x64-portable.zip",
+                "extract_dir": "pdfcraft-$version-windows-x64-portable"
+            },
+            "32bit": {
+                "url": "https://github.com/storytold/pdfcraft/releases/download/v$version/pdfcraft-$version-windows-x86-portable.zip",
+                "extract_dir": "pdfcraft-$version-windows-x86-portable"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS.txt",
+            "find": "$basename"
+        }
+    }
+}
