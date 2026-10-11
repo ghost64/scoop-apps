@@ -1,18 +1,18 @@
 {
-    "version": "0.6.0",
+    "version": "0.7.0",
     "description": "Open-source image editor and clean-room reimplementation of Adobe Photoshop, written in pure Rust",
     "homepage": "https://getartcraft.com/apps/photocraft",
     "license": "MIT OR Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/storytold/photocraft/releases/download/v0.6.0/photocraft-0.6.0-windows-x64-portable.zip",
-            "hash": "26b8f77af98de72726d90f0b28a0a8ca10ced8e49914454ddeacd12143836ab3",
-            "extract_dir": "photocraft-0.6.0-windows-x64-portable"
+            "url": "https://github.com/storytold/photocraft/releases/download/v0.7.0/photocraft-0.7.0-windows-x64-portable.zip",
+            "hash": "331e3111ed068b3f41df7d44401c3b51a312abde393e5829a4f24df2c9405b87",
+            "extract_dir": "photocraft-0.7.0-windows-x64-portable"
         },
         "32bit": {
-            "url": "https://github.com/storytold/photocraft/releases/download/v0.6.0/photocraft-0.6.0-windows-x86-portable.zip",
-            "hash": "ebe41d733bc59e4ec36a7d8c678079eda8512530551323fc11c3db384bdd7e45",
-            "extract_dir": "photocraft-0.6.0-windows-x86-portable"
+            "url": "https://github.com/storytold/photocraft/releases/download/v0.7.0/photocraft-0.7.0-windows-x86-portable.zip",
+            "hash": "61ea06d07bff7a8e82cf3f2a37e8d04455acf45d843461c7244e2f7eb39be23f",
+            "extract_dir": "photocraft-0.7.0-windows-x86-portable"
         }
     },
     "bin": [
